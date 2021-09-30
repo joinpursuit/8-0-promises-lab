@@ -38,7 +38,7 @@ describe("logResult()", () => {
   });
 });
 
-describe.only("logTwoResults()", () => {
+describe("logTwoResults()", () => {
   it("should log each person individually when given a valid name both times", async () => {
     await logTwoResults(
       { first: "Tyler", last: "Yates" },
@@ -107,7 +107,7 @@ describe.only("logTwoResults()", () => {
   });
 });
 
-describe("logThreeResultsCities()", () => {
+describe.only("logThreeResultsCities()", () => {
   it("should log all three cities, if given three valid people", async () => {
     await logThreeResultsCities(
       { first: "Joyce", last: "Wilkins" }, // Kohatk
