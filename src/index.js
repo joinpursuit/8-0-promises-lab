@@ -12,12 +12,12 @@ const finder = require("./helpers/finder");
  */
 function logResult(person) {
   finder(person.first, person.last)
-  .then((person) => {
-    console.log(person)
+  .then((data) => {
+    console.log(data)
 
   })
-  .catch((person) => {
-    console.log(person)
+  .catch((error) => {
+    console.log(error)
   })
 }
 
@@ -33,19 +33,19 @@ function logResult(person) {
  */
 function logTwoResults(person1, person2) {
   finder(person1.first, person1.last)
-  .then((person1) => {
-    console.log(person1)
+  .then((data) => {
+    console.log(data)
   })
-  .catch((person1) => {
-    console.log(person1)
+  .catch((error) => {
+    console.log(error)
   })
 
   finder(person2.first, person2.last)
   .then((data) => {
     console.log(data)
   })
-  .catch((data2) => {
-    console.log(data2)
+  .catch((error) => {
+    console.log(error)
   })
 }
 
@@ -62,24 +62,24 @@ function logTwoResults(person1, person2) {
  */
 function logThreeResultsCities(person1, person2, person3) {
   finder(person1.first, person1.last)
-  .then((person) =>{
-    console.log(person[0].city)
+  .then((data) =>{
+    console.log(data[0].city)
   })
   .catch((error) =>{
     console.log(error)
   })
 
   finder(person2.first, person2.last)
-  .then((person) =>{
-    console.log(person[0].city)
+  .then((data) =>{
+    console.log(data[0].city)
   })
   .catch((error) =>{
     console.log(error)
   })
 
   finder(person3.first, person3.last)
-  .then((person) =>{
-    console.log(person[0].city)
+  .then((data) =>{
+    console.log(data[0].city)
   })
   .catch((error) => {
     console.log(error)
