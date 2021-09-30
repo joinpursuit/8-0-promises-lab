@@ -11,7 +11,6 @@ const finder = require("./helpers/finder");
  * @param {Object} person.last - The person's last name.
  */
 function logResult(person) {
-  // console.log("something noticable", person);
   finder(person.first, person.last)
     .then((person) => {
       console.log(person);
@@ -52,6 +51,7 @@ function logThreeResultsCities(person1, person2, person3) {
   for (let person of arguments) {
     finder(person.first, person.last)
       .then((person) => {
+        //seems to return as a array object
         console.log(person[0].city);
       })
       .catch((error) => console.log(error));
