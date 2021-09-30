@@ -26,7 +26,29 @@ finder(first, last)
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+function logTwoResults(person1, person2) {
+// let arr = function.arguments;
+// arr.forEach(({first, last}) => {
+// finder(first, last)
+// .then()
+// })
+finder(person1.first, person1.last)
+  .then((result) => {
+    console.log(result)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+
+  
+finder(person2.first, person2.last)
+  .then((result) => {
+    console.log(result)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+}
 
 /**
  * logThreeResultsCities()
