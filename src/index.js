@@ -10,7 +10,16 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult({first, last}) {
+  //I did this because it wanted an object it may work without it but its faster to do exactly as told
+  finder(first, last)
+  // have to call them for it to work
+
+  .then((value) => console.log(value))
+  .catch((error) => console.log(error));
+
+  //this can work with if else but Im using speed im sorry we can change later.
+}
 
 /**
  * logTwoResults()
@@ -22,7 +31,22 @@ function logResult() {}
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+ function logTwoResults(person1, person2) {
+  finder(person1.first, person1.last)
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  finder(person2.first, person2.last)
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 /**
  * logThreeResultsCities()
@@ -35,7 +59,15 @@ function logTwoResults() {}
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(...cities) {
+  //the ... is a spread operator I can't remember if colin taught this but it means from start to the term cities 
+cities.forEach(({ first, last }) => {
+  finder(first, last)
+    .then(([{ city }]) => console.log(city))
+    .catch((error) => console.log(error));
+});
+
+}
 
 // Do not change any of the code below this line.
 module.exports = {
