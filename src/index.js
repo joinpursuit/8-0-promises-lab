@@ -62,24 +62,24 @@ function logTwoResults(person1, person2) {
  */
 function logThreeResultsCities(person1, person2, person3) {
   finder(person1.first, person1.last)
-  .then((data) =>{
-    console.log(data[0].city)
+  .then((person) =>{
+    console.log(person[0].city)
   })
   .catch((error) =>{
     console.log(error)
   })
 
   finder(person2.first, person2.last)
-  .then((data) =>{
-    console.log(data[0].city)
+  .then((person) =>{
+    console.log(person[0].city)
   })
   .catch((error) =>{
     console.log(error)
   })
 
   finder(person3.first, person3.last)
-  .then((data) =>{
-    console.log(data[0].city)
+  .then((person) =>{
+    console.log(person[0].city)
   })
   .catch((error) => {
     console.log(error)
