@@ -10,10 +10,20 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult(person) {
-finder(person.first, person.last)
-  .then((result) => console.log(result))
-  .catch((error) => console.log(error))
+function logResult(...people) {
+// finder(person.first, person.last)
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error))
+
+people.forEach((person) => {
+  finder(person.first, person.last)
+    .then((result) => {
+      console.log(result)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  })
 }
 
 /**
@@ -26,22 +36,33 @@ finder(person.first, person.last)
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults(person1, person2) {
-finder(person1.first, person1.last)
-  .then((result) => {
-    console.log(result)
-  })
-  .catch((error) => {
-    console.log(error)
-  })
+function logTwoResults(...people) {
+// finder(person1.first, person1.last)
+//   .then((result) => {
+//     console.log(result)
+//   })
+//   .catch((error) => {
+//     console.log(error)
+//   })
 
   
-finder(person2.first, person2.last)
-  .then((result) => {
-    console.log(result)
-  })
-  .catch((error) => {
-    console.log(error)
+// finder(person2.first, person2.last)
+//   .then((result) => {
+//     console.log(result)
+//   })
+//   .catch((error) => {
+//     console.log(error)
+//   })
+
+
+people.forEach((person) => {
+  finder(person.first, person.last)
+    .then((result) => {
+      console.log(result)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   })
 }
 
@@ -56,31 +77,41 @@ finder(person2.first, person2.last)
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities(person1, person2, person3) {
-  finder(person1.first, person1.last)
-  .then((city) => {
-    console.log(city[0].city)
-  })
-  .catch((error) => {
-    console.log(error)
-  })
+function logThreeResultsCities(...people) {
+  // finder(person1.first, person1.last)
+  // .then((city) => {
+  //   console.log(city[0].city)
+  // })
+  // .catch((error) => {
+  //   console.log(error)
+  // })
   
   
-  finder(person2.first, person2.last)
-  .then((city) => {
-    console.log(city[0].city)
-  })
-  .catch((error) => {
-    console.log(error)
-  })
+  // finder(person2.first, person2.last)
+  // .then((city) => {
+  //   console.log(city[0].city)
+  // })
+  // .catch((error) => {
+  //   console.log(error)
+  // })
   
   
-  finder(person3.first, person3.last)
-  .then((city) => {
-    console.log(city[0].city)
-  })
-  .catch((error) => {
-    console.log(error)
+  // finder(person3.first, person3.last)
+  // .then((city) => {
+  //   console.log(city[0].city)
+  // })
+  // .catch((error) => {
+  //   console.log(error)
+  // })
+
+people.forEach((person) => {
+  finder(person.first, person.last)
+    .then((city) => {
+      console.log(city[0].city)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   })
 }
 
