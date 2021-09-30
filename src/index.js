@@ -10,7 +10,12 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult({ first, last }) {
+  //I did this because it wanted an object it may work without it but its faster to do exactly as told
+  finder(first, last)
+    .then((value) => console.log(value))
+    .catch((error) => console.log(error));
+}
 
 /**
  * logTwoResults()
@@ -22,7 +27,22 @@ function logResult() {}
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+function logTwoResults(person1, person2) {
+  finder(person1.first, person1.last)
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  finder(person2.first, person2.last)
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 /**
  * logThreeResultsCities()
