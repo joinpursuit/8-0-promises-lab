@@ -68,21 +68,21 @@ function logThreeResultsCities(person1, person2, person3) {
     finder(person3.first, person3.last)
     .then((person3) => {
       if(person1, person2, person3) {
-console.log(`${person1[0].city}`) 
-console.log(`${person2[0].city}`)
-console.log(`${person3[0].city}`)
+console.log(`${person1[0].city}`); 
+console.log(`${person2[0].city}`);
+console.log(`${person3[0].city}`);
 }
     }).catch((error) => {
       console.log(`${error}`)
-    })
+    });
   }).catch((error) => {
     console.log(`${error}`)
-  })
+  });
 }).catch((error) => {
   console.log(`${error}`)
-})
+});
+};
 
-}
 
 
 
