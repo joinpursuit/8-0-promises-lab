@@ -31,22 +31,36 @@ function logResult(person) {
  * @param {String} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults(person1, person2) {
-  finder(person1.first, person1.last)
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((err) => {
-      console.log(err);
-  })
+// function logTwoResults(person1, person2) {
+//   finder(person1.first, person1.last)
+//     .then((data) => {
+//       console.log(data);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//   })
 
-  finder(person2.first, person2.last)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
-  })
+//   finder(person2.first, person2.last)
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   })
+// }
+
+
+// Refactoring above code to be less DRY ^^
+function logTwoResults(...persons) {
+  for (let person of persons){
+    finder(person.first, person.last)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+    })
+  }
 }
 
 /**
@@ -60,30 +74,43 @@ function logTwoResults(person1, person2) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities(person1, person2, person3) {
-  finder(person1.first, person1.last)
-    .then(([{city}]) => {
-      console.log(city);
-    })
-    .catch((err) => {
-      console.log(err);
-  })
+// function logThreeResultsCities(...persons) {
+//   finder(person1.first, person1.last)
+//     .then(([{city}]) => {
+//       console.log(city);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//   })
 
-  finder(person2.first, person2.last)
-    .then(([{city}]) => {
-      console.log(city);
-    })
-    .catch((err) => {
-      console.log(err);
-  })
+//   finder(person2.first, person2.last)
+//     .then(([{city}]) => {
+//       console.log(city);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//   })
 
-  finder(person3.first, person3.last)
-    .then(([{city}]) => {
-      console.log(city);
+//   finder(person3.first, person3.last)
+//     .then(([{city}]) => {
+//       console.log(city);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//   })
+// }
+
+// Refactoring above code to be less DRY ^^
+function logThreeResultsCities(...persons) {
+  for (let person of persons) {
+    finder(person.first, person.last)
+      .then(([{city}]) => {
+        console.log(city);
+      })
+      .catch((err) => {
+        console.log(err);
     })
-    .catch((err) => {
-      console.log(err);
-  })
+  }
 }
 
 // Do not change any of the code below this line.
