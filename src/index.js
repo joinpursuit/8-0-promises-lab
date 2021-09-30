@@ -7,8 +7,8 @@ const finder = require("./helpers/finder");
  * Logs out the entire array of objects returned from the `finder()` function.
  *
  * @param {Object} person - A person's names.
- * @param {Object} person.first - The person's first name.
- * @param {Object} person.last - The person's last name.
+ * @param {String} person.first - The person's first name.
+ * @param {String} person.last - The person's last name.
  */
 function logResult(person) {
   finder(person.first, person.last)
