@@ -45,7 +45,13 @@ function logTwoResults(...obj) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(...obj) {
+  obj.forEach(({first, last}) => {
+    finder(first, last)
+    .then(([{city}]) => console.log(city))
+    .catch((err) => console.log(err));
+});
+}
 
 // Do not change any of the code below this line.
 module.exports = {
