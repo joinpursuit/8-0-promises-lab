@@ -38,7 +38,7 @@ describe("logResult()", () => {
   });
 });
 
-describe("logTwoResults()", () => {
+describe.only("logTwoResults()", () => {
   it("should log each person individually when given a valid name both times", async () => {
     await logTwoResults(
       { first: "Tyler", last: "Yates" },
