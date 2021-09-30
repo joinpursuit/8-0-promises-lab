@@ -4,7 +4,7 @@ beforeEach(() => {
   console.log = jest.fn();
 });
 
-describe.only("logResult()", () => {
+describe("logResult()", () => {
   it("should log the person when given a valid name", async () => {
     await logResult({ first: "Ora", last: "Valentine" });
     await new Promise((resolve) => setTimeout(resolve, 300));
