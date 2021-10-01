@@ -61,24 +61,11 @@ function logTwoResults(...person) {
  */
 function logThreeResultsCities(...person) {
   
-  
   person.forEach((each) => {
-    finder(each.first, each.last).then((cooking) => {
-      console.log(cooking[0].city)
+    finder(each.first, each.last).then(([{city}]) => {
+      console.log(city)
     }).catch((error) => console.log(error))
   })
-
-
-
-  //   finder(person1.first, person1.last).then((banana) => {
-  //   finder(person2.first, person2.last).then((mango) => {
-  //     finder(person3.first, person3.last).then ((water) => {
-  //       console.log(banana.city + mango.city + water.city)
-  //     }).catch((error) => console.log(error))
-  //   }).catch((error) => console.log(error))
-  // }).catch((error) => console.log(error))
-
-
 
 }
 
