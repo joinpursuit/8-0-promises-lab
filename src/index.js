@@ -48,12 +48,12 @@ function logTwoResults(...person) {
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
 function logThreeResultsCities(person1, person2, person3) {
-  finder(person1.first, person1.last).then((element) => {
-    console.log(element)
-    finder(person2.first, person2.last).then((element) => {
-      console.log(element)
-      finder(person3.first, person3.last).then((element) => {
-        console.log(element)
+  finder(person1.first, person1.last).then((person1) => {
+    console.log(person1[0].city);
+    finder(person2.first, person2.last).then((person2) => {
+      console.log(person2[0].city)
+      finder(person3.first, person3.last).then((person3) => {
+        console.log(person3[0].city)
       }).catch((error) => console.log(error))
     }).catch((error) => console.log(error))
   }).catch((error) => console.log (error))
