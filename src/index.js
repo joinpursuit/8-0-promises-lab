@@ -61,8 +61,8 @@ function logTwoResults(person1, person2) {
 function logThreeResultsCities(person1, person2, person3) {
   finder(person1.first, person1.last)
     .then((person1) => {
-      for (const city of person1) {
-        console.log(city.city);
+      for (const person of person1) {
+        console.log(person.city);
       }
     })
     .catch((error) => {
@@ -70,8 +70,8 @@ function logThreeResultsCities(person1, person2, person3) {
     });
   finder(person2.first, person2.last)
     .then((person2) => {
-      for (const city of person2) {
-        console.log(city.city);
+      for (const person of person2) {
+        console.log(person.city);
       }
     })
     .catch((error) => {
@@ -79,8 +79,8 @@ function logThreeResultsCities(person1, person2, person3) {
     });
   finder(person3.first, person3.last)
     .then((person3) => {
-      for (const city of person3) {
-        console.log(city.city);
+      for (const person of person3) {
+        console.log(person.city);
       }
     })
     .catch((error) => {
