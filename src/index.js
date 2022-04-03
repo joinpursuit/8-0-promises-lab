@@ -35,9 +35,9 @@ function logTwoResults(person1, person2) {
   finder(person1.first, person1.last).then((person1) => {
     console.log(person1);
   })
-  // .catch((error) => {
-  //   console.log(error);
-  // });
+  .catch((error) => {
+    console.log(error);
+  });
   // // => Passing person2
   finder(person2.first, person2.last).then((person2) => {
     console.log(person2);
