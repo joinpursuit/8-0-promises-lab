@@ -61,23 +61,23 @@ function logTwoResults(person1, person2) {
  */
 function logThreeResultsCities(person1, person2, person3) {
   // => Passing person1
-  // finder(person1.first, person1.last).then((person1) => {
-  //   console.log(person1[0].city);
-  // })
+  finder(person1.first, person1.last).then((person1) => {
+    console.log(person1[0].city);
+  })
   // .catch((error) => {
   //   console.log(error);
   // });
   // // => Passing person2
-  // finder(person2.first, person2.last).then((person2) => {
-  //   console.log(person2[0].city);
-  // })
+  finder(person2.first, person2.last).then((person2) => {
+    console.log(person2[0].city);
+  })
   // .catch((error) => {
   //   console.log(error);
   // });
-  // // => Passing person3
-  // finder(person3.first, person3.last).then((person3) => {
-  //   console.log(person3[0].city);
-  // })
+  // => Passing person3
+  finder(person3.first, person3.last).then((person3) => {
+    console.log(person3[0].city);
+  })
   // .catch((error) => {
   //   console.log(error);
   // });
