@@ -32,16 +32,16 @@ function logResult(person) {
  */
 function logTwoResults(person1, person2) {
   // => Passing person1
-  // finder(person1.first, person1.last).then((person1) => {
-  //   console.log(person1);
-  // })
+  finder(person1.first, person1.last).then((person1) => {
+    console.log(person1);
+  })
   // .catch((error) => {
   //   console.log(error);
   // });
   // // => Passing person2
-  // finder(person2.first, person2.last).then((person2) => {
-  //   console.log(person2);
-  // })
+  finder(person2.first, person2.last).then((person2) => {
+    console.log(person2);
+  })
   // .catch((error) => {
   //   console.log(error);
   // });
