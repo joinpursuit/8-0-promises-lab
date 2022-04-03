@@ -15,9 +15,9 @@ function logResult(person) {
   finder(person.first, person.last).then((person) => {
     console.log(person);
   })
-  // .catch((error) => {
-  //   console.log(error);
-  // });
+  .catch((error) => {
+    console.log(error);
+  });
 }
 
 /**
