@@ -42,9 +42,9 @@ function logTwoResults(person1, person2) {
   finder(person2.first, person2.last).then((person2) => {
     console.log(person2);
   })
-  // .catch((error) => {
-  //   console.log(error);
-  // });
+  .catch((error) => {
+    console.log(error);
+  });
 }
 
 /**
