@@ -10,6 +10,10 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
+// add the finder() funtion 
+//then call para to get promise value w/ .then
+//return and log the data
+//use .catch to log error value
  function logResult(person) {
   finder(person.first, person.last).then(data => {
     console.log(data);
@@ -27,6 +31,10 @@ const finder = require("./helpers/finder");
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
+//add finder() function 
+// then call two para w/ nesting to get promise value w/ .then
+//return and log the data
+//use .catch to log errer value
 function logTwoResults(person1, person2) {
   finder(person1.first, person1.last).then(data => {
     console.log(data);
@@ -48,6 +56,10 @@ function logTwoResults(person1, person2) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
+//add finder() function
+//then call three para w/ nesting to get promise value w/ .then
+//return and log the data
+//use .catch to log error value
 function logThreeResultsCities(person1, person2, person3) {
   finder(person1.first, person1.last).then(data => {
     console.log(data[0].city)
