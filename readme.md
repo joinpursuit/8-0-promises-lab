@@ -46,7 +46,7 @@ finder("Rhea", "Waters");
 
 Keep in mind the following:
 
-- Whenever you receive a value from a promise, you should log it out. If a function requests you log out multiple values, _log out each separately._
+- Whenever you receive a value from a promise, you should log it out. If a function that you requests logs multiple values, _log out each separately._
 - Remember that you may need to nest promises inside of one another to get everything working.
 
 ### Tests
