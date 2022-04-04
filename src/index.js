@@ -45,6 +45,7 @@ function logTwoResults(person1, person2) {
 		.catch((error2) => {
 			console.log(error2);
 		});
+	//test
 }
 
 /**
