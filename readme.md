@@ -29,15 +29,15 @@ When invoked, it will return a promise that will eventually resolve to an array 
 ```js
 finder(); //> Promise { <pending> }
 
-finder("Rhea", "Callahan");
+finder('Rhea', 'Callahan');
 //> Will eventually return:
 //> [{ first: "Rhea", last: "Callahan", city: "Roosevelt", age: 40 }]
 
-finder("Rhea");
+finder('Rhea');
 //> Will eventually return:
 //> "First and Last name are required to search."
 
-finder("Rhea", "Waters");
+finder('Rhea', 'Waters');
 //> Will eventually return:
 //> "No results found for the given search parameters."
 ```
