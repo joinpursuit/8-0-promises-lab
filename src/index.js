@@ -30,7 +30,23 @@ function logResult(person) {
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults(person1, person2) {}
+function logTwoResults(person1, person2) {
+  finder(person1.first, person1.last)
+    .then((i) => {
+      console.log(i);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  finder(person2.first, person2.last)
+    .then((a) => {
+      console.log(a);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 /**
  * logThreeResultsCities()
