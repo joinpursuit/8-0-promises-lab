@@ -12,5 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.2.0"
+  },
+  "dependencies": {
+    "cypress": "^9.5.3"
   }
 }
