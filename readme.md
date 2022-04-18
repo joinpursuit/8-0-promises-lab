@@ -1,20 +1,3 @@
-# Promises Lab
-
-An asynchronous function, `finder()`, can be used to search through a long text file filled with biographic information. In this lab, you'll need to use the promise returned by that function to log out a few values. Later on, you'll build more complex functions with this data!
-
-## Getting started
-
-1. Fork and clone this repository.
-
-1. Navigate to the cloned repository's directory on your command line. Then, run the following command:
-
-   ```
-   npm install
-   ```
-
-   This will install the libraries needed to run the tests.
-
-1. Open up the repository in VSCode. Follow the instructions below to complete the Lab.
 
 ## Instructions
 
