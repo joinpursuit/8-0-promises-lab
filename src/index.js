@@ -32,20 +32,20 @@ finder(person.first,person.last)
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
 function logTwoResults(person1,person2) {
-  // finder(person1.first,person1.last)
-  // .then((res) => {
-  //   console.log(res)
-  //   finder(person2.first,person2.last)
-  // .then((res) => {
-  //   console.log(res)
-  // })
-  // .catch((err) => {
-  //   console.log(err)
-  // })
-  // })
-  // .catch((err) => {
-  //   console.log(err)
-  // })
+  finder(person1.first,person1.last)
+  .then((res) => {
+    console.log(res)
+    finder(person2.first,person2.last)
+  .then((res) => {
+    console.log(res)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 }
 
 /**
