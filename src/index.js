@@ -54,44 +54,28 @@ function logTwoResults(person1, person2) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities(...info) {
-
-  info.forEach(({ first, last }) => {
-    finder(first, last)
-      .then(([{ city }]) => console.log(city))
-      .catch((error) => console.log(error));
-  });
-  // finder(person1.first, person1.last)
-  // //This is person one I'm doing the then for their result
-  //   .then(res => {
-  //     console.log(res[0].city)
-  //     //from there I am logging the city
-  //     finder(person2.first, person2.last)
-  //     //inside here I literally copy and pasted
-  //       .then(res => {
-  //         console.log(res[0].city)
-  //         //same as above
-  //         finder(person3.first, person3.last)
-  //           .then(res => {
-  //             console.log(res[0].city)
-  //           })
-  //           //I copy and pasted 
-  //           .catch(error => {
-  //             console.log(error)
-  //           })
-  //           //I did a catch here this belongs to three end of my nest 
-  //       })
-  //       .catch(error => {
-  //         console.log(error)
-  //       })
-  //       //this belongs to two 
-  //   })
-  //   .catch(error => {
-  //     console.log(error)
-  //   })
-  //   //this belongs to one 
-
-
+function logThreeResultsCities(person1, person2, person3) {
+  finder(person1.first, person1.last)
+    .then(res => {
+      console.log(res[0].city)
+      finder(person2.first, person2.last)
+        .then(res => {
+          console.log(res[0].city)
+          finder(person3.first, person3.last)
+            .then(res => {
+              console.log(res[0].city)
+            })
+            .catch(error => {
+              console.log(error)
+            })
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    })
+    .catch(error => {
+      console.log(error)
+    })
 }
 
 // Do not change any of the code below this line.
