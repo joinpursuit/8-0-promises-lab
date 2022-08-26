@@ -60,27 +60,27 @@ function logTwoResults(person1,person2) {
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
 function logThreeResultsCities(person1,person2,person3) {
-  // finder(person1.first,person1.last)
-  // .then((res) => {
-  //   console.log(res[0].city)
-  //   finder(person2.first,person2.last)
-  // .then((res) => {
-  //   console.log(res[0].city)
-  //   finder(person3.first,person3.last)
-  //   .then((res) => {
-  //     console.log(res[0].city)
-  //   })
-  //   .catch((err) => {
-  //     console.log(err)
-  //   })
-  // })
-  // .catch((err) => {
-  //   console.log(err)
-  // })
-  // })
-  // .catch((err) => {
-  //   console.log(err)
-  // })
+  finder(person1.first,person1.last)
+  .then((res) => {
+    console.log(res[0].city)
+    finder(person2.first,person2.last)
+  .then((res) => {
+    console.log(res[0].city)
+    finder(person3.first,person3.last)
+    .then((res) => {
+      console.log(res[0].city)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  })
+  .catch((err) => {
+    console.log(err)
+  })
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 }
 
 // Do not change any of the code below this line.
