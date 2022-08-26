@@ -33,6 +33,18 @@ function logResult(person) {
 function logTwoResults(person1, person2) {
   const persons = [person1, person2];
   persons.forEach((person) => logResult(person));
+
+  // alternate way
+  // logResult(person1);
+  // logResult(person2);
+
+  // alternate way we went over in class
+  // finder(person1.first, person1.last)
+  //   .then((res) => {console.log(res)})
+  //   .catch((err) => {console.log(err)});
+  // finder(person2.first, person2.last)
+  //   .then((res) => {console.log(res)})
+  //   .catch((err) => {console.log(err)});
 }
 
 /**
