@@ -10,7 +10,19 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult(person) {
+  const first = person.first
+  const last = person.last
+
+  finder(first,last)
+    .then((lennie) => {
+      console.log(lennie)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+
+}
 
 /**
  * logTwoResults()
@@ -22,7 +34,28 @@ function logResult() {}
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+function logTwoResults(person1,person2) {
+  const first1 = person1.first
+  const last1 = person1.last
+  const first2 = person2.first
+  const last2 = person2.last
+
+  finder(first1,last1)
+    .then((lennie) => {
+      console.log(lennie)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+
+  finder(first2,last2)
+    .then((mars) => {
+      console.log(mars)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+}
 
 /**
  * logThreeResultsCities()
@@ -35,7 +68,41 @@ function logTwoResults() {}
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(person1,person2,person3) {
+  const first1 = person1.first
+  const last1 = person1.last
+  const first2 = person2.first
+  const last2 = person2.last
+  const first3 = person3.first
+  const last3 = person3.last
+
+  finder(first1,last1)
+    .then((lennie) => {
+      const result = lennie
+      console.log(result[0]["city"])
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+
+  finder(first2,last2)
+    .then((mars) => {
+      const result = mars
+      console.log(result[0]["city"])
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+
+  finder(first3,last3)
+    .then((chris) => {
+      const result = chris
+      console.log(result[0]["city"])
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+}
 
 // Do not change any of the code below this line.
 module.exports = {
