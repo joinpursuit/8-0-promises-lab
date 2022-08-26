@@ -1,5 +1,5 @@
 // Do not change the line directly below.
-const finder = require("./helpers/finder");
+const finder = require('./helpers/finder');
 
 /**
  * logResult()
@@ -10,7 +10,15 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult(person) {
+  finder(person.first, person.last)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 /**
  * logTwoResults()
@@ -22,8 +30,23 @@ function logResult() {}
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+function logTwoResults(person1, person2) {
+  finder(person1.first, person1.last)
+    .then((response1) => {
+      console.log(response1);
+    })
+    .catch((error1) => {
+      console.log(error1);
+    });
 
+  finder(person2.first, person2.last)
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 /**
  * logThreeResultsCities()
  * ========================
@@ -35,7 +58,36 @@ function logTwoResults() {}
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(person1, person2, person3) {
+  finder(person1.first, person1.last)
+    .then((response1) => {
+      response1.forEach((p1) => {
+        console.log(p1.city);
+      });
+    })
+    .catch((error1) => {
+      console.log(error1);
+    });
+
+  finder(person2.first, person2.last)
+    .then((response2) => {
+      response2.forEach((p2) => {
+        console.log(p2.city);
+      });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  finder(person3.first, person3.last)
+    .then((response3) => {
+      response3.forEach((p3) => {
+        console.log(p3.city);
+      });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+}
 
 // Do not change any of the code below this line.
 module.exports = {
