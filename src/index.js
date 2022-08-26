@@ -40,25 +40,25 @@ function logTwoResults(person1, person2) {
   // const first1 = person1.first
   // const last1 = person1.last
 
-//   finder(person1.first, person1.last)
-//   .then((res) => {
-//     console.log(res)
-//       })
-//       .catch((err) => {
-//     console.log(err)
-//       })
+  finder(person1.first, person1.last)
+  .then((res) => {
+    console.log(res)
+      })
+      .catch((err) => {
+    console.log(err)
+      })
 
-//   const first2 = person2.first
-//   const last2 = person2.last   
+  const first2 = person2.first
+  const last2 = person2.last   
   
-//   finder(first2,last2)
-//   .then((res) => {
-//     console.log(res)
-//       })
-//       .catch((err) => {
-//     console.log(err)
-//       })
-// }
+  finder(first2,last2)
+  .then((res) => {
+    console.log(res)
+      })
+      .catch((err) => {
+    console.log(err)
+      })
+}
 
 /**
  * logThreeResultsCities()
