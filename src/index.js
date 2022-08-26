@@ -10,7 +10,20 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult(person) {
+
+  const first = person.first
+  const last = person.last
+
+  finder(first,last)
+  .then((res) => {
+console.log(res)
+  })
+  .catch((err) => {
+console.log(err)
+  })
+}
+
 
 /**
  * logTwoResults()
@@ -22,7 +35,30 @@ function logResult() {}
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+function logTwoResults(person1, person2) {
+  //can set chain for name to a variable
+  // const first1 = person1.first
+  // const last1 = person1.last
+
+//   finder(person1.first, person1.last)
+//   .then((res) => {
+//     console.log(res)
+//       })
+//       .catch((err) => {
+//     console.log(err)
+//       })
+
+//   const first2 = person2.first
+//   const last2 = person2.last   
+  
+//   finder(first2,last2)
+//   .then((res) => {
+//     console.log(res)
+//       })
+//       .catch((err) => {
+//     console.log(err)
+//       })
+// }
 
 /**
  * logThreeResultsCities()
