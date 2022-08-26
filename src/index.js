@@ -10,7 +10,15 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult(person) {
+  finder(person.first, person.last)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
 
 /**
  * logTwoResults()
@@ -22,7 +30,10 @@ function logResult() {}
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+function logTwoResults(person1, person2) {
+  const persons = [person1, person2];
+  persons.forEach((person) => logResult(person));
+}
 
 /**
  * logThreeResultsCities()
@@ -35,7 +46,18 @@ function logTwoResults() {}
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(person1, person2, person3) {
+  const people = [person1, person2, person3];
+  people.forEach((person) => {
+    finder(person.first, person.last)
+      .then((res) => {
+        console.log(res[0].city);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
+}
 
 // Do not change any of the code below this line.
 module.exports = {
