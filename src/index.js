@@ -62,7 +62,7 @@ function logTwoResults(person1, person2) {
 function logThreeResultsCities(person1, person2, person3) {
   finder(person1.first, person1.last)
   .then((message) => {
-    console.log(message.city)
+    console.log(message[0].city)
   })
   .catch((message) => {
     console.log(message)
@@ -70,7 +70,7 @@ function logThreeResultsCities(person1, person2, person3) {
 
    finder(person2.first, person2.last)
      .then((message) => {
-       console.log(message.city)
+       console.log(message[0].city)
      })
      .catch((message) => {
        console.log(message)
@@ -78,7 +78,7 @@ function logThreeResultsCities(person1, person2, person3) {
 
      finder(person3.first, person3.last)
      .then((message) => {
-       console.log(message.city)
+       console.log(message[0].city)
      })
      .catch((message) => {
        console.log(message)
