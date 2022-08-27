@@ -32,29 +32,28 @@ function logResult(person) {
  */
 
 function logTwoResults(person1, person2) {
-  const people = [person1, person2] 
-  people.forEach((ppl)=> {
-  logResult(ppl)
-  })
+  // const people = [person1, person2] 
+  // people.forEach((ppl)=> {
+  // logResult(ppl)
+  // })
 
   // logResult(person1) //!
   // logResult(person2)//!
 
-
-//   finder(person1.first, person1.last)
-//   .then((result)=>{
-//     console.log(result)
-//   })
-//   .catch((error)=>{
-// console.log(error)
-//   })
-//   finder(person2.first, person2.last)
-//   .then((result2)=>{
-//     console.log(result2)
-//   })
-//   .catch((error2)=>{
-//     console.log(error2)
-//   })
+  finder(person1.first, person1.last)
+  .then((result)=>{
+    console.log(result)
+  })
+  .catch((error)=>{
+console.log(error)
+  })
+  finder(person2.first, person2.last)
+  .then((result2)=>{
+    console.log(result2)
+  })
+  .catch((error2)=>{
+    console.log(error2)
+  })
 }
 
 /**
