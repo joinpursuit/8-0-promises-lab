@@ -52,25 +52,42 @@ function logTwoResults(person1, person2) {
  */
 function logThreeResultsCities(person1,person2,person3) {
   // resp (array)-> [{"age": 26, "city": "Soham", "first": "Marshall", "last": "Short"}]
-  finder(person1.first, person1.last)
-  .then((resp) => resp.forEach(({city}) => {
-    console.log(city)
-  }))
-  .catch((err) => console.log(err))
+  // finder(person1.first, person1.last)
+  // .then((resp) => resp.forEach(({city}) => {
+  //   console.log(city)
+  // }))
+  // .catch((err) => console.log(err))
  
-  // person 2
-  finder(person2.first, person2.last)
-  .then((resp) => resp.forEach(({city}) => {
-    console.log(city)
-  }))
-  .catch((err) => console.log(err))
+  // // person 2
+  // finder(person2.first, person2.last)
+  // .then((resp) => resp.forEach(({city}) => {
+  //   console.log(city)
+  // }))
+  // .catch((err) => console.log(err))
 
-  // person 3
-  finder(person3.first, person3.last)
-  .then((resp) => resp.forEach(({city}) => {
-    console.log(city)
-  }))
-  .catch((err) => console.log(err))
+  // // person 3
+  // finder(person3.first, person3.last)
+  // .then((resp) => resp.forEach(({city}) => {
+  //   console.log(city)
+  // }))
+  // .catch((err) => console.log(err))
+
+  //Alternate try 2 to create third function w/ 3 p's as parameters
+  function logThreePeople(p1, p2, p3){
+    let array = [p1,p2,p3]
+    array.forEach((p) => {
+      finder(p.first, p.last)
+      .then(resp => {
+        resp.forEach(({city}) => {
+          console.log(city)
+        })
+      })
+      .catch((err) => console.log(err))
+    })
+  }
+
+  //call created logThreePeople() using inputs as parameters
+  logThreePeople(person1,person2,person3)
 
 
 }
