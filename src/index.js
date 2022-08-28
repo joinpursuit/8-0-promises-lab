@@ -31,20 +31,8 @@ function logResult(person) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
 function logTwoResults(person1, person2) {
-  finder(person1.first, person1.last)
-    .then((person1Arr) => {
-      console.log(person1Arr);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  finder(person2.first, person2.last)
-    .then((person2Arr) => {
-      console.log(person2Arr);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  logResult(person1);
+  logResult(person2);
 }
 
 /**
