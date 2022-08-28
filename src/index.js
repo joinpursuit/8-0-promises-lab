@@ -59,52 +59,20 @@ function logTwoResults(person1, person2) {
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
 function logThreeResultsCities(person1, person2, person3) {
-  finder(person1.first, person1.last)
-    .then((person1Arr) => {
-      console.log(person1Arr[0].city);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  function logPersonsCity(person) {
+    finder(person.first, person.last)
+      .then((personArr) => {
+        console.log(personArr[0].city);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
-  finder(person2.first, person2.last)
-    .then((person2Arr) => {
-      console.log(person2Arr[0].city);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-
-  finder(person3.first, person3.last)
-    .then((person3Arr) => {
-      console.log(person3Arr[0].city);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  logPersonsCity(person1);
+  logPersonsCity(person2);
+  logPersonsCity(person3);
 }
-
-// finder(person1.first, person1.last)
-//     .then((person1Arr) => {
-//       finder(person2.first, person2.last)
-//         .then((person2Arr) => {
-//           finder(person3.first, person3.last)
-//             .then((person3Arr) => {
-//               console.log(person1Arr[0].city);
-//               console.log(person2Arr[0].city);
-//               console.log(person3Arr[0].city);
-//             })
-//             .catch((error) => {
-//               console.log(error);
-//             });
-//         })
-//         .catch((error) => {
-//           console.log(error);
-//         });
-//     })
-//     .catch((error) => {
-//       console.log(error);
-//     });
 
 // Do not change any of the code below this line.
 module.exports = {
