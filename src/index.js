@@ -32,15 +32,15 @@ function logResult(person) {
  */
 function logTwoResults(person1, person2) {
   finder(person1.first, person1.last)
-    .then((people1) => {
-      finder(person2.first, person2.last)
-        .then((people2) => {
-          console.log(people1);
-          console.log(people2);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    .then((person1Arr) => {
+      console.log(person1Arr);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  finder(person2.first, person2.last)
+    .then((person2Arr) => {
+      console.log(person2Arr);
     })
     .catch((error) => {
       console.log(error);
@@ -61,26 +61,50 @@ function logTwoResults(person1, person2) {
 function logThreeResultsCities(person1, person2, person3) {
   finder(person1.first, person1.last)
     .then((person1Arr) => {
-      finder(person2.first, person2.last)
-        .then((person2Arr) => {
-          finder(person3.first, person3.last)
-            .then((person3Arr) => {
-              console.log(person1Arr[0].city);
-              console.log(person2Arr[0].city);
-              console.log(person3Arr[0].city);
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      console.log(person1Arr[0].city);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  finder(person2.first, person2.last)
+    .then((person2Arr) => {
+      console.log(person2Arr[0].city);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  finder(person3.first, person3.last)
+    .then((person3Arr) => {
+      console.log(person3Arr[0].city);
     })
     .catch((error) => {
       console.log(error);
     });
 }
+
+// finder(person1.first, person1.last)
+//     .then((person1Arr) => {
+//       finder(person2.first, person2.last)
+//         .then((person2Arr) => {
+//           finder(person3.first, person3.last)
+//             .then((person3Arr) => {
+//               console.log(person1Arr[0].city);
+//               console.log(person2Arr[0].city);
+//               console.log(person3Arr[0].city);
+//             })
+//             .catch((error) => {
+//               console.log(error);
+//             });
+//         })
+//         .catch((error) => {
+//           console.log(error);
+//         });
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
 
 // Do not change any of the code below this line.
 module.exports = {
