@@ -60,35 +60,48 @@ function logTwoResults(person1, person2) {
  */
 function logThreeResultsCities(person1, person2, person3) {
   // [1, 2, 3].forEach((name) => {
-  //   finder(`person${name}.first`, `person${name}.last`)
+  //   let first = "person" + name.first;
+  //   let last = "person" + name.last;
+  //   finder(first, last)
   //     .then((resolve) => {
-  //       console.log(resolve);
+  //       console.log(resolve[0].city);
   //     })
   //     .catch((reject) => {
   //       console.log(reject);
   //     });
   // });
-  finder(person1.first, person1.last)
+  const name1 = finder(person1.first, person1.last);
+  const name2 = finder(person2.first, person2.last);
+  const name3 = finder(person3.first, person3.last);
+  Promise.all([name1, name2, name3])
     .then((resolve) => {
-      console.log(resolve[0].city);
-      finder(person2.first, person2.last)
-        .then((resolve) => {
-          console.log(resolve[0].city);
-          finder(person3.first, person3.last)
-            .then((resolve) => {
-              console.log(resolve[0].city);
-            })
-            .catch((reject) => {
-              console.log(reject);
-            });
-        })
-        .catch((reject) => {
-          console.log(reject);
-        });
+      resolve.forEach((nName) => console.log(nName[0].city));
     })
     .catch((reject) => {
       console.log(reject);
     });
+
+  // finder(person1.first, person1.last)
+  //   .then((resolve) => {
+  //     console.log(resolve[0].city);
+  //     finder(person2.first, person2.last)
+  //       .then((resolve) => {
+  //         console.log(resolve[0].city);
+  //         finder(person3.first, person3.last)
+  //           .then((resolve) => {
+  //             console.log(resolve[0].city);
+  //           })
+  //           .catch((reject) => {
+  //             console.log(reject);
+  //           });
+  //       })
+  //       .catch((reject) => {
+  //         console.log(reject);
+  //       });
+  //   })
+  //   .catch((reject) => {
+  //     console.log(reject);
+  //   });
 }
 
 // Do not change any of the code below this line.
