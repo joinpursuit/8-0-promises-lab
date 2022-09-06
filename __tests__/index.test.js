@@ -107,7 +107,7 @@ describe("logTwoResults()", () => {
   });
 });
 
-describe("logThreeResultsCities()", () => {
+describe.only("logThreeResultsCities()", () => {
   it("should log all three cities, if given three valid people", async () => {
     await logThreeResultsCities(
       { first: "Joyce", last: "Wilkins" }, // Kohatk
