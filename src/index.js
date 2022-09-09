@@ -16,7 +16,7 @@ function logResult(person, key) {
 
   // const first = person.first
   // const last = person.last
-  const { first, last } = person ?? {} //con el doble ?? garantizamos el caso de que cuando sea indefinido tome un objeto vacio.
+  const { first, last } = person ?? {} //with the double ?? we guarantee that when the variables are undefined they do not stay like that and instead the code continues taking an empty object as value.
 
   if (!first || !last) {
     console.log("First and Last name are required to search.")
