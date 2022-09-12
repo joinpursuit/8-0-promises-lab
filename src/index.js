@@ -61,21 +61,21 @@ function logTwoResults(person1, person2) {
 function logThreeResultsCities(person1, person2, person3) {
   finder(person1.first, person1.last, person1.City)
     .then((res) => {
-      console.log(res);
+      console.log(res[0].city);
     })
     .catch((err) => {
       console.log(err);
     });
   finder(person2.first, person2.last, person2.City)
     .then((res) => {
-      console.log(res);
+      console.log(res[0].city);
     })
     .catch((err) => {
       console.log(err);
     });
   finder(person3.first, person3.last, person3.City)
     .then((res) => {
-      console.log(res);
+      console.log(res[0].city);
     })
     .catch((err) => {
       console.log(err);
