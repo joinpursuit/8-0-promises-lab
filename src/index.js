@@ -69,7 +69,43 @@ function logTwoResults(person1, person2) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() { }
+function logThreeResultsCities(person1, person2, person3) { 
+    //the promise uses first and last name and returns an array if possible
+    finder(person1.first, person1.last)
+        //if possible, get the result
+        .then((result) => {
+            //log the city
+            console.log(result[0].city);
+        })
+        //catch the error
+        .catch((err) => {
+            console.log(err);
+        })
+
+    //same for person 2
+    finder(person2.first, person2.last)
+        //if possible, get the result
+        .then((result) => {
+            //log the city
+            console.log(result[0].city);
+        })
+        //catch the error
+        .catch((err) => {
+            console.log(err);
+        })
+        
+    //same for person 3
+    finder(person3.first, person3.last)
+        //if possible, get the result
+        .then((result) => {
+            //log the city
+            console.log(result[0].city);
+        })
+        //catch the error
+        .catch((err) => {
+            console.log(err);
+        })
+}
 
 // Do not change any of the code below this line.
 module.exports = {
