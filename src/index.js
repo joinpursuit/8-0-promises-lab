@@ -10,7 +10,13 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult(person) {
+  finder(person.first, person.last).then((result) => {
+    console.log(result);
+  }).catch((error) => {
+    console.log(error);
+  })
+};
 
 /**
  * logTwoResults()
@@ -22,7 +28,10 @@ function logResult() {}
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+function logTwoResults(cardiA, cardiB) {
+logResult(cardiA);
+logResult(cardiB);
+}
 
 /**
  * logThreeResultsCities()
@@ -35,8 +44,34 @@ function logTwoResults() {}
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(cardiA, cardiB, cardiC) {
+  finder(cardiA.first, cardiA.last)
+  .then((bop)=> {
+    console.log(bop[0].city);
+  })
+  .catch((error)=> {
+  console.log(error);
+  })
+  finder(cardiB.first, cardiB.last)
+  .then((bop)=> {
+    console.log(bop[0].city);
+  })
+  .catch((error)=> {
+  console.log(error);
+  })
+  finder(cardiC.first, cardiC.last)
+  .then((bop)=> {
+    console.log(bop[0].city);
+  })
+  .catch((error)=> {
+  console.log(error);
+  })
+}
 
+// finder(person.first, person.last, person.city)
+//   logResult(cardiA)
+//   logResult(cardiB)
+//   logResult(cardiC)
 // Do not change any of the code below this line.
 module.exports = {
   logResult,
