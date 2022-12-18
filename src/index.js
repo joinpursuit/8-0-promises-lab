@@ -30,6 +30,8 @@ function logResult(person) {
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
+
+//there is a wqay to just use the logResult function, but I didn't realize that.
 function logTwoResults(person1, person2) {
 finder(person1.first, person1.last).then((people)=>{
   console.log(people)
@@ -56,9 +58,26 @@ finder(person2.first, person2.last).then((people)=>{
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
 function logThreeResultsCities(person1, person2, person3) {
+//because we get an array of one object, we have to act on the zeroeth element of "people"
   finder(person1.first, person1.last).then((people)=>{
-    console.log(people.city)
-}
+      console.log(people[0].city)
+    }).catch((error)=>{
+      console.log(error)
+    })
+
+    finder(person2.first, person2.last).then((people)=>{
+      console.log(people[0]["city"])
+    }).catch((error)=>{
+      console.log(error)
+    })
+
+    finder(person3.first, person3.last).then((people)=>{
+      console.log(people[0].city)
+    }).catch((error)=>{
+      console.log(error)
+    })
+    }
+  
 
 // Do not change any of the code below this line.
 module.exports = {
