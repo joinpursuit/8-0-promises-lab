@@ -27,6 +27,7 @@ function finder(first, last) {
       const lines = data.split("\n");
       const people = lines.map(_convert);
       const result = people.filter(_find(first, last));
+     
       if (result.length) {
         resolve(result);
       } else {
