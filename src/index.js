@@ -10,7 +10,11 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult(person) {
+  finder.then(person => {
+    console.log(person)
+  })
+}
 
 /**
  * logTwoResults()
