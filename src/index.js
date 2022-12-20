@@ -1,23 +1,14 @@
 // Do not change the line directly below.
 const finder = require("./helpers/finder");
 
-// create a 'helper' function that will help us write less code while still being efficient
-// taking two arguments one being the 'person' and the other 'prop'
-// 'person' is the default argument that is being used in this lab
-// 'prop' is just the property we want printed out instead of the whole 'person'
 function logResultHelper(person, prop){
-
-  // use the default 'finder()' function to look for a person
   finder(person.first, person.last)
     .then( person => {
-      // if the 'finder()' function returns a person successfully, the function will then print the 'person' object to the console.
-      // this is unless the 'prop' argument is provided at which point we will print the value of the specified property of the 'person' object
       console.log( !prop ? person : person[0][prop]);
     })
     .catch( error => {
       console.log(`${error}`);
     });
-
 };
 
 /**
