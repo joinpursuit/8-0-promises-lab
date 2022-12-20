@@ -55,9 +55,6 @@ function logTwoResults({first: first1, last: last1}, {first: first2, last: last2
     })
 }
 
-logTwoResults({ first: "Tyler", last: "Yates" },
-{ first: "Yvette", last: "Glenn" })
-
 /**
  * logThreeResultsCities()
  * ========================
@@ -69,7 +66,39 @@ logTwoResults({ first: "Tyler", last: "Yates" },
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(person1, person2, person3) {
+  const {first: first1, last: last1} = person1;
+  const {first: first2, last: last2} = person2;
+  const {first: first3, last: last3} = person3;
+
+  if(!first1 || !first2 || !first3 || !last1 || !last2 || !last3){
+    console.log("First and Last name are required to search.")
+  }
+
+  finder(first1, last1)
+  .then((result) => {
+    console.log(result[0].city)
+  })
+  .then(() => {
+    finder(first2, last2)
+      .then((result2)=> {
+        console.log(result2[0].city)
+      })
+      .then(() => {
+        finder(first3, last3)
+          .then((result3)=> {
+            console.log(result3[0].city)
+          })
+          .catch(() =>
+          console.log("No results found for the given search parameters."))
+      })
+      .catch(() =>
+      console.log("No results found for the given search parameters."))
+  })
+  .catch(()=>{
+    console.log("No results found for the given search parameters.")
+  })
+}
 
 // Do not change any of the code below this line.
 module.exports = {
