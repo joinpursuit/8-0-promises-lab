@@ -22,9 +22,9 @@ You will complete three functions in the `src/index.js` file which will require 
 
 ### finder()
 
-The `finder()` function takes an object as its argument. It is expected that the object will contain a `first` and `last` key. Each key should match with the first and last name of a person in the `src/data/people.txt` file.
+The `finder()` function takes two strings as its arguments, the first name and the last name of a person in the `src/data/people.txt` file.
 
-When invoked, it will return a promise that will eventually resolve to an array of objects. Each object in this array will be people whose first and last name match what was given. If no person can be found, or if the inputted object is malformed, an error message will be resolved.
+When invoked, it will return a promise that will eventually resolve to an array of objects. Each object in this array will be a person whose first and last name match what was given. If no person can be found, or if either argument is invalid, an error message will be resolved.
 
 ```js
 finder(); //> Promise { <pending> }
