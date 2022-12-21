@@ -28,18 +28,23 @@ function logResult(person) {
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults(person1,person2) {
-  finder(person1.first,person1.last).then((person) => {
-    console.log(person)
-  }).catch((error)=> {
-    console.log (`${error}`)
-  })
-  finder(person2.first,person2.last).then((person) => {
-    console.log(person)
-  }).catch((error)=> {
-    console.log (`${error}`)
-  })
+function logTwoResults(...people) {
+  // method 1
+  people.forEach(person => logResult(person)) // calling the first function 
 }
+  // method 2
+  //   function logTwoResults(person1,person2) {
+    //   finder(person1.first,person1.last).then((person) => {
+    //     console.log(person)
+    //   }).catch((error)=> {
+    //     console.log (`${error}`)
+    //   })
+    //   finder(person2.first,person2.last).then((person) => {
+    //     console.log(person)
+    //   }).catch((error)=> {
+    //     console.log (`${error}`)
+    //   })
+  // }
 
 /**
  * logThreeResultsCities()
@@ -53,18 +58,19 @@ function logTwoResults(person1,person2) {
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
 function logThreeResultsCities(person1,person2,person3) {
+// method 2
   finder(person1.first,person1.last).then((person) => {
-    console.log(person.city)
+    console.log(person[0].city)
   }).catch((error)=> {
     console.log (`${error}`)
   })
   finder(person2.first,person2.last).then((person) => {
-    console.log(person.city)
+    console.log(person[0].city)
   }).catch((error)=> {
     console.log (`${error}`)
   })
   finder(person3.first,person3.last).then((person) => {
-    console.log(person.city)
+    console.log(person[0].city)
   }).catch((error)=> {
     console.log (`${error}`)
   })
