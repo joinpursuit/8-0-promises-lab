@@ -66,19 +66,19 @@ function logTwoResults(person1, person2) {
  */
 function logThreeResultsCities(person1,person2, person3) {
   finder(person1.first, person1.last).then((apple) => {
-    console.log(apple)
+    console.log(apple[0].city)
   
   }).catch (error => {
      console.log(error)
   })
   finder(person2.first, person2.last).then((apple) => {
-      console.log(apple)
+      console.log(apple[0].city)
    
     }).catch (error => {
        console.log(error)
     })
     finder(person3.first, person3.last).then((apple) => {
-      console.log(apple[apple])
+      console.log(apple[0].city)
     
     }).catch (error => {
        console.log(error)
