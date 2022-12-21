@@ -14,7 +14,7 @@
   finder(person.first, person.last).then((person) => { // using promise then method to find person first and last name or log error
     console.log(person)
   }).catch((error)=> {
-    console.log (`${error}`)
+    console.log (error)
   })
  }
 
