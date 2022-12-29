@@ -58,7 +58,29 @@ function logTwoResults(person1, person2) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(person1, person2, person3) {
+  finder(person1.first, person1.last)
+  .then(([{city}]) =>{
+    console.log(city)
+  })
+  .catch((error)=>{
+    console.log(error)
+  });
+  finder(person2.first, person2.last)
+  .then(([{city}])=>{
+    console.log(city)
+  })
+  .catch((error)=>{
+    console.log(error)
+  })
+  finder(person3.first, person3.last)
+  .then(([{city}])=>{
+    console.log(city)
+  })
+  .catch((error)=>{
+    console.log(error)
+  })
+}
 
 // Do not change any of the code below this line.
 module.exports = {
