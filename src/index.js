@@ -10,7 +10,14 @@ const finder = require("./helpers/finder");
  * @param {Object} person.first - The person's first name.
  * @param {Object} person.last - The person's last name.
  */
-function logResult() {}
+function logResult(person) {
+  finder(person.first, person.last)
+  .then(name=>{
+    console.log(name)})
+  .catch(err=>{
+    console.log(err)
+  })
+}
 
 /**
  * logTwoResults()
@@ -22,7 +29,14 @@ function logResult() {}
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults() {}
+function logTwoResults(person1, person2) {
+  finder(person1.first, person1.last)
+  .then(name=>console.log(name))
+  .catch(err=>console.log(err))
+  finder(person2.first, person2.last)
+  .then(name=>console.log(name))
+  .catch(err=>console.log(err))
+}
 
 /**
  * logThreeResultsCities()
@@ -35,7 +49,19 @@ function logTwoResults() {}
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(per1,per2,per3) {
+  finder(per1.first,per1.last)
+    .then(name=>console.log(name[0].city))
+    .catch(err=>console.log(err))
+
+  finder(per2.first,per2.last)
+    .then(name=>console.log(name[0].city))
+    .catch(err=>console.log(err))
+
+  finder(per3.first,per3.last)
+    .then(name=>console.log(name[0].city))
+    .catch(err=>console.log(err))
+}
 
 // Do not change any of the code below this line.
 module.exports = {
