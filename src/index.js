@@ -44,7 +44,9 @@ function logTwoResults(onePerson, twoPerson) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities() {}
+function logThreeResultsCities(person1, person2, person3) {
+
+}
 
 // Do not change any of the code below this line.
 module.exports = {
