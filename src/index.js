@@ -61,6 +61,14 @@ function logThreeResultsCities(person1, person2, person3) {
    .catch((error) => {
      console.log(error);
    });
+
+   finder(person3.first, person3.last)
+     .then((result) => {
+       console.log(result[0].city);
+     })
+     .catch((error) => {
+       console.log(error);
+     });
 }
 
 // Do not change any of the code below this line.
