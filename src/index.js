@@ -39,13 +39,13 @@ function logTwoResults(person1, person2) {
       console.log(error)
     })
 
-    finder(person2.first, person2.last) 
-      .then((person2) => {
-        console.log(person2)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
+  finder(person2.first, person2.last) 
+    .then((person2) => {
+      console.log(person2)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 }
 
 /**
@@ -61,24 +61,24 @@ function logTwoResults(person1, person2) {
  */
 function logThreeResultsCities(person1, person2, person3) {
   finder(person1.first, person1.last)
-    .then((person1) => {
-      console.log(person1.city)
+    .then((person) => {
+      console.log(person[0].city)
     })
     .catch((error) => {
       console.log(error)
     })
-
+    
   finder(person2.first, person2.last)
-    .then((person2) => {
-      console.log(person2.city)
+    .then((person) => {
+      console.log(person[0].city)
     })
     .catch((error) => {
       console.log(error)
     })
 
   finder(person3.first, person3.last)
-    .then((person3) => {
-      console.log(person3.city)
+    .then((person) => {
+      console.log(person[0].city)
     })
     .catch((error) => {
       console.log(error)
