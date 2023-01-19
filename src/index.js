@@ -2,7 +2,7 @@
 const finder = require("./helpers/finder");
 
 /**
- * logResult()
+ * logresult()
  * ========================
  * Logs out the entire array of objects returned from the `finder()` function.
  *
@@ -11,10 +11,10 @@ const finder = require("./helpers/finder");
  * @param {Object} person.last - The person's last name.
  */
 
-function logResult(person) {
+function logresult(person) {
   finder(person.first, person.last)
-    .then((res) => {
-      console.log(res);
+    .then((response) => {
+      console.log(response);
     })
 
     .catch((err) => {
@@ -23,7 +23,7 @@ function logResult(person) {
 }
 
 /**
- * logTwoResults()
+ * logTworesults()
  * ========================
  * Logs out the entire array of objects returned from the `finder()` function for two different people.
  *
@@ -32,11 +32,11 @@ function logResult(person) {
  * @param {Object} person1.last - The person's last name.
  * @param {Object} person2 - A person's names. In the same format as person1.
  */
-function logTwoResults(person1, person2) {
+function logTworesults(person1, person2) {
   //takes in person1 + person 2 as parama
   finder(person1.first, person1.last)
-    .then((res) => {
-      console.log(res);
+    .then((response) => {
+      console.log(response);
     })
     //using the callback as an argument for the first param(-person1), if promise is sucessful the response should be logged to console
     .catch((err) => {
@@ -44,8 +44,8 @@ function logTwoResults(person1, person2) {
     });
   // if the repsonse for person 1 is unsuccessful, then the error will be logged to consosle
   finder(person2.first, person2.last)
-    .then((res) => {
-      console.log(res);
+    .then((response) => {
+      console.log(ressponse);
     })
     //using the callback as an argument for the first param(-person2), if promise is sucessful the response should be logged to console
 
@@ -56,7 +56,7 @@ function logTwoResults(person1, person2) {
 }
 
 /**
- * logThreeResultsCities()
+ * logThreeresultsCities()
  * ========================
  * Logs out just the cities from all three people given to the function. You may assume that each search result will only return a single person.
  *
@@ -66,10 +66,10 @@ function logTwoResults(person1, person2) {
  * @param {Object} person2 - A person's names. In the same format as person1.
  * @param {Object} person3 - A person's names. In the same format as person1.
  */
-function logThreeResultsCities(person1, person2, person3) {
+function logThreeresultsCities(person1, person2, person3) {
   finder(person1.first, person1.last)
-    .then((res) => {
-      console.log(res[0].city);
+    .then((response) => {
+      console.log(response[0].city);
     })
 
     .catch((err) => {
@@ -77,8 +77,8 @@ function logThreeResultsCities(person1, person2, person3) {
     });
 
   finder(person2.first, person2.last)
-    .then((res) => {
-      console.log(res[0].city);
+    .then((response) => {
+      console.log(response[0].city);
     })
 
     .catch((err) => {
@@ -86,8 +86,8 @@ function logThreeResultsCities(person1, person2, person3) {
     });
 
   finder(person3.first, person3.last)
-    .then((res) => {
-      console.log(res[0].city);
+    .then((response) => {
+      console.log(response[0].city);
     })
 
     .catch((err) => {
@@ -96,7 +96,7 @@ function logThreeResultsCities(person1, person2, person3) {
 }
 // Do not change any of the code below this line.
 module.exports = {
-  logResult,
-  logTwoResults,
-  logThreeResultsCities,
+  logresult,
+  logTworesults,
+  logThreeresultsCities,
 };
