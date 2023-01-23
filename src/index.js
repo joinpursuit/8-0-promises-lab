@@ -62,42 +62,41 @@ function logTwoResults(person1, person2) {
  */
 function logThreeResultsCities(person1, person2, person3) {
 
-  finder(person1.first, person1.last).then((person1) => {
-    _convert(person1.line).then((person1) => {
-      let person1city = person1.line[2]
-      console.log(person1city);
+  finder(person1.first, person1.last)
+  .then((person) => {
+      console.log(person[0].city);
     })
-  }).catch((error) => {
-    console.log(error);
-  })
-
-  finder(person2.first, person2.last).then((person2) => {
-    _convert(person2.line).then((person2) => {
-      let person2city = person2.line[2]
-      console.log(person2city)
+    .catch((error) => {
+      console.log(error)
     })
-  }).catch((error) => {
-    console.log(error)
-  })
 
-  finder(person3.first, person3.last).then((person3) => {
-    _convert(person3.line).then((person3) => {
-      let person3city = person3.line[2]
-      console.log(person3city)
+    finder(person2.first, person2.last)
+  .then((person) => {
+      console.log(person[0].city);
     })
-  }).catch((error) => {
-    console.log(error)
-  });
+    .catch((error) => {
+      console.log(error)
+    })
 
 
+    finder(person3.first, person3.last)
+  .then((person) => {
+      console.log(person[0].city);
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 
+  // finder(person3.first, person3.last).then((person3) => {
+  //   _convert(person3.line).then((person3) => {
+  //     let person3city = person3.line[2]
+  //     console.log(person3city)
+  //   })
+  // }).catch((error) => {
+  //   console.log(error)
+  // });
 
-
-  // _convert(person1.line).then((person1) => {
-  //   let person1City = person1.line[2]
-  //   console.log(person1City)
-  // }).catch
-}
+  }
 
 // Do not change any of the code below this line.
 module.exports = {
